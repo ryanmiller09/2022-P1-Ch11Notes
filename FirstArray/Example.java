@@ -4,19 +4,14 @@ public class Example {
 
         //Arrays store one datatype
         int numberOfChristmasGifts[];
-        numberOfChristmasGifts = new int[2];
+        numberOfChristmasGifts = new int[200];
+        int k = 0;
+        for(k = 0; k < numberOfChristmasGifts.length; k++){
+            numberOfChristmasGifts[k] = 6;
+            System.out.println(numberOfChristmasGifts[k]);
+        }
 
-        numberOfChristmasGifts[0] = 7;
-        numberOfChristmasGifts[1] = 3;
 
-        System.out.println(numberOfChristmasGifts[0]);
-        System.out.println(numberOfChristmasGifts[1]);
-
-        numberOfChristmasGifts[0] = 42;
-        numberOfChristmasGifts[1] = 6;
-
-        System.out.println(numberOfChristmasGifts[0]);
-        System.out.println(numberOfChristmasGifts[1]);
     }
 
 }
