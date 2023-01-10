@@ -1,6 +1,5 @@
 package Searching;
 import java.util.Random;
-
 public class LinearSearch {
     static int numList[] = new int[1000];
 
@@ -16,9 +15,18 @@ public class LinearSearch {
     }
 
 
-    public static int linearSearch(int lookup){
-        for
+    public static int linearSearch(int lookup) {
+        for (int k = 0; k < numList.length; k++) {
+            if (numList[k] == lookup) {
+                // Return the position of the data's index
+                return k;
+            }
+        }
+        // Return invalid data if not found
+        return -1;
+
     }
+
 
 }
 
