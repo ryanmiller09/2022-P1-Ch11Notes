@@ -1,7 +1,7 @@
 package Searching;
 
 public class BinarySearch {
-    static int numList[] = {81, 74, 65, 65, 51, 24, 23, 20, 15, 7};
+    static int numList[] = {7, 15, 20, 23, 24, 51, 65, 65, 74, 81};
     public static void main(String args[]){
         System.out.println(binarySearch(23));
     }
@@ -9,22 +9,24 @@ public class BinarySearch {
     public static int binarySearch(int lookup){
         int low = 0;
         int high = numList.length;
-        int middle = (high - low) / 2;
 
-        while(numList[middle] != lookup){
-            if(numList[middle] > lookup){
-                high = middle;
+
+        while(low < high) {
+            int middle = ((high - low) / 2) + low;
+            if (numList[middle] > lookup) {
+                high = middle - 1;
             }
-            if(numList[middle] < lookup){
+            if (numList[middle] < lookup) {
+                low = middle + 1;}
+
+
+            if (numList[middle] == lookup) {
+                return middle;
+            }else {
+                    middle = (high - low) / 2;
+                }
             }
-                low = middle;
-            }
-        if(numList[middle] == lookup){
-            return middle;
-        }
-        else{
-            middle = (high - low) / 2;
-        }
+
       return -1;
         }
         }
